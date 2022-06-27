@@ -10,7 +10,18 @@ with st.container():
     left_column,right_column=st.columns(2)
     with left_column:
         st.header("Available Data")       
-st.subheader("""Basic Engineering Properties of Grain""")  
+st.subheader("""Basic Engineering Properties of Grain""")
+import streamlit as st
+import pandas as pd
+df = pd.DataFrame({
+  'Grains': [1, 2, 3, 4],
+  'Bulk Desinty': [10, 20, 30, 40],
+  'Angle of Repose':[10, 20, 40, 50],
+  'Porocity': [10, 20, 40, 50],
+  'Roundness': [10, 20, 40, 50]
+})
+
+df 
 #sidenotes 
 st.sidebar.title("Option")
 text=st.sidebar.text_area("Paste Text Here")
@@ -33,3 +44,4 @@ pw.text_input("password",type="password")
 pw2.text_input("Retype your password",type="password")
 button1=st.button("Submit")
 st.write('Developer Lemi Demissie PhD student @ASTU')
+
